@@ -23,7 +23,7 @@ B.  Write a method "cast" that casts the n-th element of the "spells" array.
     return spells[i];}
     Include an interface (seperately) for the Spell class to insure your "cast" method will interact with the class.
   public interface Arcanism{
-  public Spell cast();
+  public Spell cast();}
 C.  Write a "hello" method that prints an introduction stating the name of the Wizard.
   public void hello(){
     System.out.println("Greetings! I am the grand Wizard " + this.name);}
