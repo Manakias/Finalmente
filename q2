@@ -2,13 +2,57 @@
 
 A.  Explain what recursion is and when it is useful.
     Explain what the |termination step| and |recursion step| are in a recursive method.
-
+Recursion is when a method calls itself. It is useful for solving many problems, like traversing binary trees - with recursion, many things are simplified. It can also be useful when the amount of times a certain function would have to run is unknown.
+The termination step is when a recursive loop breaks, usually when a condition is satisfied. Without one, a recursive loop would go on infinitely, which would be extremely... bad. The recursion step is pretty much self-explanatory. At the recursion step, the recursive method is called, and it is executed from the top, often with a new argument.
 B.  Describe the difference between a Queue and a Stack.
+Queues and stacks are both linear data structures, but there the similarities end. Queues follow a FIFO (first in, first out) processing design. This means that the first datablock that was put into the queue will be the first to get pulled out. It can be described as people waiting in line for their food - the first one to be in the line will be the first one served. Stacks follow a LIFO (last in, first out) processing design. This means that the last datablock put onto the stack will be the first to get pulled out. It can be described as a pile of plates - the last one on the stack of plates, at the top, will be the first plate to be taken by someone.
+
 
 C.  Write a class for an element of a doublely-linked list.
+public class DLLUnit{
+  DLLUnit next;
+  DLLUnit prev; //Don't be a preev. ;)
+  Object payload;
+  
+  public DLLUnit(){}
+  
+  public DLLUnit(Object target){
+    this.payload=target;}
+  
+  public DLLUnit(DLLUnit next, DLLUnit prev){
+    this.next=next;
+    this.prev=prev;}
+  
+  public DLLUnit(DLLUnit next, DLLUnit prev, Object payload){
+    this.next = next;
+    this.prev=prev;
+    this.payload = payload;}
+ 
+  public DLLUnit getNext(){
+    return this.next;}
+  
+  public DLLUnit getPrev(){
+    return this.prev;}
+  
+  public Object getPayload(){
+    return this.payload;}
+  
+  public void setNext(DLLUnit newnext){
+    this.next=newnext;}
+  
+  public void setPrev(DLLUnit newprev){
+    this.prev=newprev;}
+  
+  public void setPayload(Object newpay){
+    this.payload=newpay;}
+}
+  
 
 D.  Explain what a Merkle Tree is.  
     Describe the structure and purpose of a Merkle Tree.
     What is the Merkle root?
     What is the function of a certificate in this data structure?
+    
+    A Merkle tree, also called a hash tree, is a binary tree of datablocks where each datablock is marked with its hash. The structure of a Merkle tree is akin to that of a binary tree, where each node has two children, except for the ending nodes (leaf nodes). The Merkle root is the top of the tree, and by extension the root hash - the hash of all the documents combined. The function of a certificate in this data structure is to verify the authenticity and integrity of a datablock compared to a set of datablocks - for example, in P2P torrent networks, to make sure no block is damaged or adulterated.
+
     
