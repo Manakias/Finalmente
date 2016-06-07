@@ -1,18 +1,27 @@
 333333333
 
 A.  Explain how digital signature works with public/private keypairs.
+Digital signature using public-key cryptography revolves around both segments of the keypair. At the moment of generation, a public key and a private key are not identical, but they are associated with each other via a common algorithm. To create a message and sign it, a person must do the following. First, associate themselves with their public key - for example, take a picture with their face, gov't issued ID, and their public key - this establishes an identity to go with the public key. In order to sign a message, they first must create the message and hash it. After this, they take this hash and encrypt it with the public key (XOR algorithm perhaps?). At this point, a signature for the message has been created. Anyone can then take the message and follow the same steps above with the person's public key, and then they can observe that the two results are either identical (meaning that this person signed this exact message) or different (meaning the message has been adulterated or this is not the signer).
+
 
 B.  Identify your favorite Java project this semester.  
     Describe two things you learned by doing the project.
     Describe two ways in which the project could be improved or expanded.
-    
+My favorite Java projects were our Merkle trees and our studies of public-key cryptography. (Yes, I'm split.)  With these projects, I learned about how data is secured and verified, as well as how to create and prove concepts like digital identity. I feel we could have delved deeper into PKC, however, perhaps creating some code based around it, and possibly creating our own simple public key algorithm. With Merkle trees, however, I've not much to say - we studied them deeply and extensively. Visualization is always nice though :)
+
 C.  Describe two advantages of object-oriented programming.
     Describe two disadvantages of object-oriented programming.
+Advantage 1: Versatility - Objects made for OOP are not confined to any one object - they can be taken anywhere, used for anything. Don't feed them after midnight, though.
+Advantage 2: Abstraction - Objects can be very easily described to anyone. Objects in a program are much like objects in real life - they both have characteristics and things you can do to/with them.
+Disadvantage 1: Speed - OOPs are very slow, and take a lot of resources to execute, because they often can quickly become hulking masses of code.
+Disadvantage 2: Size - OOPs quickly get very big, and due to this, are really, really easy to screw up at some point.
+
     
 D.  Consider the following PYTHON code for the MNode class given below.
     What is the difference in the way Python and Java handle the declaration of datatypes?
     Explain the difference in how constructors are written in Python vs Java.
     Which language do you prefer?  Explain why.
+Java is much more verbose in its declaration of data types - you must state you intend to create an integer before assigning a value, as well as if you intend it to be public or private. Python doesn't particularly care about this, instead just reading what you've assigned to a variable, and taking care of the rest. Constructors in Python are written in many fewer words, not needing a return type, static/non-static declaration, etc. In Java, much like with data types, you must be very verbose - declaring all of the things explained above. Although it seems counterintuitive, I honestly prefer Java compared to Python, taking the MNode as an example. In Python, a lot of things seem unclear, and very vague - for example, 'pay=0' . What's pay? Is it an int? A double? Dare say, a string?! In its verboseness, Java is very clear and very exact. To declare the same thing in Java, you would say 'int pay = 0;'. There. Much more clear. We know it's an int, with a value of zero. Yes, it's a bit of a simplistic example, but my point is present nonetheless. 
 -------------------------------------------------------------------------------------
     import hashlib
 
