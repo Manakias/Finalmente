@@ -53,6 +53,6 @@ D.  Explain what a Merkle Tree is.
     What is the Merkle root?
     What is the function of a certificate in this data structure?
     
-    A Merkle tree, also called a hash tree, is a binary tree of datablocks where each datablock is marked with its hash. The structure of a Merkle tree is akin to that of a binary tree, where each node has two children, except for the ending nodes (leaf nodes). The Merkle root is the top of the tree, and by extension the root hash - the hash of all the documents combined. The function of a certificate in this data structure is to verify the authenticity and integrity of a datablock compared to a set of datablocks - for example, in P2P torrent networks, to make sure no block is damaged or adulterated.
+    A Merkle tree, also called a hash tree, is a binary tree of datablocks where each datablock is marked with its hash. The structure of a Merkle tree is akin to that of a binary tree, where each node has two children, except for the ending nodes (leaf nodes). Its purpose is to hold a large repository of files that can be verified to have been submitted at a certain date/time, etc. The Merkle root is the top of the tree, and by extension the root hash - the hash of all the documents combined. The function of a certificate in this data structure is to verify the authenticity and integrity of a datablock compared to a set of datablocks - for example, in P2P torrent networks, to make sure no block is damaged or adulterated.
 
     
